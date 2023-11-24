@@ -7,7 +7,8 @@ library(ggplot2)
 
 #Loading the dataset
 W_3.data <- Read10X_h5("W3 filtered_feature_bc_matrix-2.h5")
-A_3.data <- Read10X_h5("A3 filtered_feature_bc_matrix-2.h5") #Other data as well.
+A_3.data <- Read10X_h5("A3 filtered_feature_bc_matrix-2.h5") 
+#The data from the wild-type and AR-97Q mice at 6, 9, and 13 weeks of age need to be loaded as well.
 
 #Creating the seurat object
 W_3 <- CreateSeuratObject(counts = W_3.data,project = "W_3", min.cell = 3)
